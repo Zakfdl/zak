@@ -170,8 +170,7 @@ GitHub
 https://github.com/Zakfdl
 
 LinkedIn  
-(Add your LinkedIn profile here)
-
+https://www.linkedin.com/in/zakaria-fadl-56b3b4384
 
 ## License
 
