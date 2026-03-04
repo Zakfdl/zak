@@ -10,31 +10,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@v4
-
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-
       - name: Install dependencies
         run: npm install
-
 
       - name: Build project
         run: npm run build
 
-
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/
-          server-dir: public_html/
+          # Note: We use 'vars' for the server and username based on your screenshot
+          server: ${{ vars.FTP_SERVER }}
+          username: ${{ vars.FTP_USERNAME }}
+          # Use 'vars' if password is in Variables, or 'secrets' if you moved it to Secrets
+          password: ${{ vars.FTP_PASSWORD }} 
+          
+          # Use ./dist/ to ensure the path is recognized correctly
+          local-dir: ./dist/
+          server-dir: ./public_html/
+          
+          # Optional but recommended for Hostinger stability
+          protocol: ftp
+          port: 21
           dangerous-clean-slate: true
