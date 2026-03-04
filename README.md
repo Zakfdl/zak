@@ -6,7 +6,7 @@ This project started as an AI-generated theme to speed up development. After gen
 
 The goal was to keep full control of the source code and update the portfolio anytime without being limited by platform editing restrictions.
 
-🌐 Live Portfolio  
+Live Portfolio  
 https://berrizak.com
 
 
