@@ -1,165 +1,103 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
-		<meta name="generator" content="Hostinger Horizons" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Hostinger Horizons</title>
-		<script type="module" crossorigin src="/assets/index-DSNF-J9E.js"></script>
-		<link rel="stylesheet" crossorigin href="/assets/index-CWAua_lY.css">
-		<script type="module">
-window.onerror = (message, source, lineno, colno, errorObj) => {
-	const errorDetails = errorObj ? JSON.stringify({
-		name: errorObj.name,
-		message: errorObj.message,
-		stack: errorObj.stack,
-		source,
-		lineno,
-		colno,
-	}) : null;
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="generator" content="Hostinger Horizons" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	window.parent.postMessage({
-		type: 'horizons-runtime-error',
-		message,
-		error: errorDetails
-	}, '*');
-};
-</script>
-		<script type="module">
-const observer = new MutationObserver((mutations) => {
-	for (const mutation of mutations) {
-		for (const addedNode of mutation.addedNodes) {
-			if (
-				addedNode.nodeType === Node.ELEMENT_NODE &&
-				(
-					addedNode.tagName?.toLowerCase() === 'vite-error-overlay' ||
-					addedNode.classList?.contains('backdrop')
-				)
-			) {
-				handleViteOverlay(addedNode);
-			}
-		}
-	}
-});
+  <!-- ✅ SEO -->
+  <title>Zakaria Fadl | E-commerce Specialist</title>
+  <meta name="description" content="Portfolio of Zakaria Fadl — E-commerce Specialist focused on growth, CRO, analytics, and technical problem solving." />
+  <link rel="canonical" href="https://berrizak.com/" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#1E3A8A" />
 
-observer.observe(document.documentElement, {
-	childList: true,
-	subtree: true
-});
+  <!-- ✅ Open Graph (LinkedIn/Facebook) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://berrizak.com/" />
+  <meta property="og:title" content="Zakaria Fadl | E-commerce Specialist" />
+  <meta property="og:description" content="Explore my portfolio, experience, and projects in e-commerce and digital growth." />
+  <meta property="og:image" content="https://berrizak.com/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
-function handleViteOverlay(node) {
-	if (!node.shadowRoot) {
-		return;
-	}
+  <!-- ✅ Twitter/X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Zakaria Fadl | E-commerce Specialist" />
+  <meta name="twitter:description" content="Explore my portfolio, experience, and projects in e-commerce and digital growth." />
+  <meta name="twitter:image" content="https://berrizak.com/og.jpg" />
 
-	const backdrop = node.shadowRoot.querySelector('.backdrop');
+  <!-- ✅ Schema: Person + Website -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Person",
+        "@id":"https://berrizak.com/#zakaria",
+        "name":"Zakaria Fadl",
+        "url":"https://berrizak.com/",
+        "jobTitle":"E-commerce Specialist",
+        "email":"mailto:zakfdl22@gmail.com",
+        "telephone":"+966570674043",
+        "sameAs":[
+          "https://www.linkedin.com/in/zakaria-fadl-56b3b4384/"
+        ]
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://berrizak.com/#website",
+        "url":"https://berrizak.com/",
+        "name":"Zakaria Fadl Portfolio",
+        "publisher":{"@id":"https://berrizak.com/#zakaria"}
+      }
+    ]
+  }
+  </script>
 
-	if (backdrop) {
-		const overlayHtml = backdrop.outerHTML;
-		const parser = new DOMParser();
-		const doc = parser.parseFromString(overlayHtml, 'text/html');
-		const messageBodyElement = doc.querySelector('.message-body');
-		const fileElement = doc.querySelector('.file');
-		const messageText = messageBodyElement ? messageBodyElement.textContent.trim() : '';
-		const fileText = fileElement ? fileElement.textContent.trim() : '';
-		const error = messageText + (fileText ? ' File:' + fileText : '');
+  <!-- ✅ Keep these two lines EXACTLY as Vite generates them -->
+  <script type="module" crossorigin src="/assets/index-DSNF-J9E.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CWAua_lY.css">
 
-		window.parent.postMessage({
-			type: 'horizons-vite-error',
-			error,
-		}, '*');
-	}
-}
-</script>
-		<script type="module">
-const originalConsoleError = console.error;
-console.error = function(...args) {
-	originalConsoleError.apply(console, args);
+  <!-- ✅ Keep Hostinger scripts (as you already have them) -->
+  <script type="module">
+    window.onerror = (message, source, lineno, colno, errorObj) => {
+      const errorDetails = errorObj ? JSON.stringify({
+        name: errorObj.name,
+        message: errorObj.message,
+        stack: errorObj.stack,
+        source,
+        lineno,
+        colno,
+      }) : null;
 
-	let errorString = '';
+      window.parent.postMessage({
+        type: 'horizons-runtime-error',
+        message,
+        error: errorDetails
+      }, '*');
+    };
+  </script>
 
-	for (let i = 0; i < args.length; i++) {
-		const arg = args[i];
-		if (arg instanceof Error) {
-			errorString = arg.stack || `${arg.name}: ${arg.message}`;
-			break;
-		}
-	}
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" sizes="any">
 
-	if (!errorString) {
-		errorString = args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : String(arg)).join(' ');
-	}
+<!-- PNG favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
-	window.parent.postMessage({
-		type: 'horizons-console-error',
-		error: errorString
-	}, '*');
-};
-</script>
-		<script type="module">
-const originalFetch = window.fetch;
+<!-- Android icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
 
-window.fetch = function(...args) {
-	const url = args[0] instanceof Request ? args[0].url : args[0];
+<!-- Apple -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-	// Skip WebSocket URLs
-	if (url.startsWith('ws:') || url.startsWith('wss:')) {
-		return originalFetch.apply(this, args);
-	}
+<!-- Web manifest -->
+<link rel="manifest" href="/site.webmanifest">
 
-	return originalFetch.apply(this, args)
-		.then(async response => {
-			const contentType = response.headers.get('Content-Type') || '';
-
-			// Exclude HTML document responses
-			const isDocumentResponse =
-				contentType.includes('text/html') ||
-				contentType.includes('application/xhtml+xml');
-
-			if (!response.ok && !isDocumentResponse) {
-					const responseClone = response.clone();
-					const errorFromRes = await responseClone.text();
-					const requestUrl = response.url;
-					console.error(`Fetch error from ${requestUrl}: ${errorFromRes}`);
-			}
-
-			return response;
-		})
-		.catch(error => {
-			if (!url.match(/.html?$/i)) {
-				console.error(error);
-			}
-
-			throw error;
-		});
-};
-</script>
-		<script type="module">
-if (window.navigation && window.self !== window.top) {
-	window.navigation.addEventListener('navigate', (event) => {
-		const url = event.destination.url;
-
-		try {
-			const destinationUrl = new URL(url);
-			const destinationOrigin = destinationUrl.origin;
-			const currentOrigin = window.location.origin;
-
-			if (destinationOrigin === currentOrigin) {
-				return;
-			}
-		} catch (error) {
-			return;
-		}
-
-		window.parent.postMessage({
-			type: 'horizons-navigation-error',
-			url,
-		}, '*');
-	});
-}
-</script>
-	</head>
+</head>
 	<body>
 		<div id="root"></div>
 	</body>
