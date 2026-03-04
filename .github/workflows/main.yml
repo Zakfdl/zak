@@ -23,7 +23,6 @@ jobs:
 
       - name: Build project
         run: npm run build
-        working-directory: apps/web
 
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
