@@ -1,3 +1,4 @@
+import { FaWhatsapp } from "react-icons/fa";
 import React, { useState, useRef, useEffect } from 'react';
 import {
   Phone,
@@ -193,19 +194,19 @@ const ContactSection = () => {
 
               <div className="flex items-center gap-4">
 
-                <div className="p-4 rounded-xl bg-gradient-to-br from-green-500 to-green-600 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <MessageCircle className="text-white" size={28} />
-                </div>
+        <div className="p-4 rounded-xl bg-gradient-to-br from-green-500 to-green-600 shadow-lg group-hover:scale-110 transition-transform duration-300">
+          <FaWhatsapp className="text-white" size={28} />
+        </div>
 
-                <div className="flex-1">
-                  <p className="text-sm text-gray-400 mb-1">WhatsApp</p>
+        <div className="flex-1">
+          <p className="text-sm text-gray-400 mb-1">WhatsApp</p>
 
-                  <p className="text-lg font-semibold text-white-400 group-hover:text-white-300 transition-colors">
-                    Chat on WhatsApp
-                  </p>
-                </div>
+          <p className="text-lg font-semibold text-white group-hover:text-gray-200 transition-colors">
+            Chat on WhatsApp
+          </p>
+        </div>
 
-              </div>
+      </div>
 
             </a>
 
