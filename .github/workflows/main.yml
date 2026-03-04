@@ -27,8 +27,8 @@ jobs:
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}        # مثال صحيح: 92.113.19.192 أو ftp.berrizak.com (بدون ftp://)
-          username: ${{ secrets.FTP_USERNAME }}    # مثال: u426907394.berrizak.com
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
