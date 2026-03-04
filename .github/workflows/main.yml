@@ -27,17 +27,10 @@ jobs:
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          # Note: We use 'vars' for the server and username based on your screenshot
-          server: ${{ vars.FTP_SERVER }}
-          username: ${{ vars.FTP_USERNAME }}
-          # Use 'vars' if password is in Variables, or 'secrets' if you moved it to Secrets
-          password: ${{ vars.FTP_PASSWORD }} 
-          
-          # Use ./dist/ to ensure the path is recognized correctly
-          local-dir: ./dist/
-          server-dir: ./public_html/
-          
-          # Optional but recommended for Hostinger stability
-          protocol: ftp
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
           port: 21
-          dangerous-clean-slate: true
+          local-dir: dist/
+          server-dir: public_html/
