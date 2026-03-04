@@ -24,13 +24,16 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to Hostinger via FTP
+      - name: Deploy to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          server: ${{ vars.FTP_SERVER }}
+          username: ${{ vars.FTP_USERNAME }}
+          # Wrapping in quotes to handle the '#' character safely
+          password: "${{ vars.FTP_PASSWORD }}" 
+          local-dir: ./dist/
+          server-dir: ./public_html/
+          # Hostinger usually prefers explicit FTPS on port 21
           protocol: ftps
           port: 21
-          local-dir: dist/
-          server-dir: public_html/
+          dangerous-clean-slate: true
