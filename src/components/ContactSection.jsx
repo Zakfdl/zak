@@ -162,19 +162,35 @@ const ContactSection = () => {
               );
             })}
 
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 border border-gray-700">
-              <div className="flex items-center gap-4">
-                <div className="p-4 rounded-xl bg-gradient-to-br from-red-500 to-pink-600 shadow-lg">
-                  <MapPin className="text-white" size={28} />
-                </div>
-                <div className="flex-1">
-                  <p className="text-sm text-gray-400 mb-1">Location</p>
-                  <p className="text-lg font-semibold text-white">
-                    Saudi Arabia
-                  </p>
-                </div>
-              </div>
-            </div>
+            <a
+  href="https://wa.me/966570674043"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group block bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-green-500 hover:-translate-y-1"
+>
+  <a
+  href="https://wa.me/966570674043?text=Hello%20Zakaria,%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group block bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-700 hover:border-green-500 hover:-translate-y-1"
+>
+  <div className="flex items-center gap-4">
+
+    <div className="p-4 rounded-xl bg-gradient-to-br from-green-500 to-green-600 shadow-lg group-hover:scale-110 transition-transform duration-300">
+      <MessageCircle className="text-white" size={28} />
+    </div>
+
+    <div className="flex-1">
+      <p className="text-sm text-gray-400 mb-1">WhatsApp</p>
+
+      <p className="text-lg font-semibold text-green-400 group-hover:text-green-300 transition-colors">
+        Contact me on WhatsApp
+      </p>
+    </div>
+
+  </div>
+</a>
+      </a>
           </div>
 
           {/* Contact Form */}
